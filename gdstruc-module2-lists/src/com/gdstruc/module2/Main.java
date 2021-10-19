@@ -18,10 +18,8 @@ public class Main {
 
         playerLinkedList.printList();
 
-        System.out.print("Linked list's size of elements: ");
-        playerLinkedList.size();
-
-        System.out.println("Contains: " + playerLinkedList.contains(1, "Asuna", 100));
-        System.out.println("Index of: " + playerLinkedList.indexOf(1, "Asuna", 100));
+        System.out.println("Linked list's size of elements: " + playerLinkedList.size());
+        System.out.println("Contains: " + playerLinkedList.contains(asuna));
+        System.out.println("Index of: " + playerLinkedList.indexOf(asuna));
     }
 }

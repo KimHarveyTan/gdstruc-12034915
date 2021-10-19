@@ -29,33 +29,31 @@ public class PlayerLinkedList {
         head.setPreviousPlayer(null);
     }
 
-    public void  size() {
+    public int size() {
         PlayerNode current = head;
         int count = 0;
         while(current != null){
             count++;
             current = current.getNextPlayer();
         }
-        System.out.println(count);
+        return count;
     }
-
-    public boolean contains(int id, String name, int level) {
+    public boolean contains(Player player) {
         PlayerNode current = head;
         boolean contain = false;
         while (current != null) {
-            if (id == current.getPlayer().getId() && name == current.getPlayer().getName() && level == current.getPlayer().getLevel()) {
+            if (player.equals(current.getPlayer())){
                 contain = true;
             }
             current = current.getNextPlayer();
         }
         return contain;
     }
-
-    public int indexOf(int id, String name, int level) {
+    public int indexOf(Player player) {
         PlayerNode current = head;
         int currentIndex = 0;
         while (current != null) {
-            if (id == current.getPlayer().getId() && name == current.getPlayer().getName() && level == current.getPlayer().getLevel()) {
+            if (player.equals(current.getPlayer())){
                 return currentIndex;
             }
             current = current.getNextPlayer();
